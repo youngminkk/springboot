@@ -30,6 +30,9 @@ jobs:
         distribution: 'temurin'
     - name: Set execute permissions for Gradle
       run: chmod +x ./gradlew
+    - run: touch ./src/main/resources/application.properties
+    - run: echo "${{ SPRINGBOOT_APPLICATION_PROPERTIES }}" > ./src/main/resources/application.properties
+    - run: cat ./src/main/resources/application.properties
     - name: Build with Gradle
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
