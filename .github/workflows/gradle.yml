@@ -48,9 +48,6 @@ jobs:
     # appspec.yml Copy
     - name: Copy appspec
       run: cp appspec.yml ./deploy
-    # deploy.sh Copy
-    #- name: Copy script
-    #  run: cp ./deploy.sh ./deploy
 
     - name: Make zip file
       run: zip -r -qq -j ./springboot-build.zip ./deploy
