@@ -68,6 +68,7 @@ jobs:
 
     - name: Code Deploy
       run: aws deploy create-deployment
+        --region ap-northeast-2
         --application-name springboot-git 
         --deployment-config-name CodeDeployDefault.AllAtOnce
         --deployment-group-name springboot-git-group 
