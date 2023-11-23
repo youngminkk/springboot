@@ -45,9 +45,15 @@ jobs:
     # Jar 파일 복사
     - name: Copy Jar
       run: cp ./build/libs/*.jar ./deploy
+    # appspec.yml Copy
+    - name: Copy appspec
+      run: cp appspec.yml ./deploy
+    # deploy.sh Copy
+    - name: Copy script
+      run: cp ./deploy.sh ./deploy
 
     - name: Make zip file
-      run: zip -r ./springboot-build.zip ./deploy
+      run: zip -r -qq -j ./springboot-build.zip ./deploy
       shell: bash
 
     - name: Configure AWS credentials
@@ -59,3 +65,10 @@ jobs:
 
     - name: Upload to S3
       run: aws s3 cp --region ap-northeast-2 ./springboot-build.zip s3://springboot-git-build/
+
+    - name: Code Deploy
+      run: aws deploy create-deployment
+        --application-name springboot-git 
+        --deployment-config-name CodeDeployDefault.AllAtOnce
+        --deployment-group-name springboot-git-group 
+        --s3-location bucket=springboot-git-build,bundleType=zip,key=springboot-build.zip
