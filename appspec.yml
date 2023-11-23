@@ -4,6 +4,12 @@ files:
   - source:  /
     destination: c:\spring
 file_exists_behavior: OVERWRITE
-
+hooks:
+  ApplicationStop:
+    - location: stop_server.ps1
+      timeout: 30
+  ApplicationStart:
+    - location: start_server.ps1
+      timeout: 60
 
 
