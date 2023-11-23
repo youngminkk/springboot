@@ -71,5 +71,5 @@ jobs:
         --region ap-northeast-2
         --application-name springboot-git 
         --deployment-config-name CodeDeployDefault.AllAtOnce
-        --deployment-group-name springboot-git-group 
+        --deployment-group-name springboot-git-group
         --s3-location bucket=springboot-git-build,bundleType=zip,key=springboot-build.zip
