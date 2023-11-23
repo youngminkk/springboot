@@ -5,16 +5,12 @@ files:
     destination: c:\spring
 file_exists_behavior: OVERWRITE
 
-permissions:
-  -object: /
-  pattern: "**"
-
-#hooks:
-#  ApplicationStop:
-#    - location: scripts/stop_server.ps1
-#      timeout: 30
-#  ApplicationStart:
-#    - location: scripts/start_server.ps1
-#      timeout: 60
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_server.ps1
+      timeout: 30
+  ApplicationStart:
+    - location: scripts/start_server.ps1
+      timeout: 60
 
 
