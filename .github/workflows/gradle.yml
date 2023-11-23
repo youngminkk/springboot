@@ -49,10 +49,9 @@ jobs:
     - name: Copy appspec
       run: cp appspec.yml ./deploy
   # 스크립트 파일 복사
-    - name: Copy start and stop scripts
-      run: |
-        cp ./start_server.ps1 ./deploy
-        cp ./stop_server.ps1 ./deploy
+    - name: Copy scripts
+      run: cp -r ./scripts ./deploy
+
 
     - name: Make zip file
       run: zip -r -qq -j ./springboot-build.zip ./deploy

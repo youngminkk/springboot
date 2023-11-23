@@ -11,10 +11,10 @@ permissions:
 
 hooks:
   ApplicationStop:
-    - location: stop_server.ps1
+    - location: scripts/stop_server.ps1
       timeout: 30
   ApplicationStart:
-    - location: start_server.ps1
+    - location: scripts/start_server.ps1
       timeout: 60
 
 
