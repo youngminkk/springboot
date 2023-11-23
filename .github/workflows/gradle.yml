@@ -49,8 +49,8 @@ jobs:
     - name: Copy appspec
       run: cp appspec.yml ./deploy
   # 스크립트 파일 복사
-    - name: Copy scripts
-      run: cp -r ./scripts ./deploy
+    #- name: Copy scripts
+    #  run: cp -r ./scripts ./deploy
 
 
     - name: Make zip file
