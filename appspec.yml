@@ -1,0 +1,9 @@
+version: 0.0
+os: windows
+files:
+  - source:  /
+    destination: c:\temp\webapps\Config
+file_exists_behavior: OVERWRITE
+
+
+
