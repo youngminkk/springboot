@@ -34,7 +34,7 @@ dependencies {
 	implementation 'org.springframework.session:spring-session-jdbc'
 //	implementation 'com.h2database:h2:'
 	/*DB 오라클 접속에 필요한 라이브러리*/
-	//ojdbc8 - 오라클에서 제공하는 라이브러리로 JAVA와 연동하기 위해 쓰임(8버전이 19c에 활용가능)
+	//ojdbc8 - 오라클에서 제공하는 라이브러리로 JAVA와 연동하기 위해 쓰임(8버전이 19c에 용가능)
 //	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
 	//mariaDB
 	// https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
