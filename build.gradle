@@ -32,6 +32,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	implementation 'org.springframework.session:spring-session-jdbc'
+//	implementation 'com.h2database:h2:'
 	/*DB 오라클 접속에 필요한 라이브러리*/
 	//ojdbc8 - 오라클에서 제공하는 라이브러리로 JAVA와 연동하기 위해 쓰임(8버전이 19c에 용가능)
 //	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
@@ -41,7 +42,6 @@ dependencies {
 	//오라클과 자바사이에서 연동되는 드라이버를 사용하기위한 정보가 담긴 라이브러리 (전자지갑에 있음)
 	implementation 'com.oracle.database.security:oraclepki'
 	implementation 'com.oracle.database.security:osdt_core'
-	testImplementation 'com.h2database:h2:'
 	implementation 'com.oracle.database.security:osdt_cert'
     testImplementation 'junit:junit:4.13.1'
 	testImplementation 'junit:junit:4.13.1'
