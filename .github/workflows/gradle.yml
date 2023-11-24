@@ -34,6 +34,10 @@ jobs:
     - run: echo "${{ secrets.SPRINGBOOT_APPLICATION_PROPERTIES }}" > ./src/main/resources/application.properties
     - run: touch ./src/main/resources/application-oauth.properties
     - run: echo "${{ secrets.SPRINGBOOT_APPLICATION_OAUTH_PROPERTIES }}" > ./src/main/resources/application-oauth.properties
+    - run: touch ./src/main/resources/application-real.properties
+    - run: echo "${{ secrets.REAL_PROPERTIES }}" > ./src/main/resources/application-real.properties
+    - run: touch ./src/main/resources/application-real-db.properties
+    - run: echo "${{ secrets.REAL_DB_PROPERTIES }}" > ./src/main/resources/application-real-db.properties
     - name: Build with Gradle
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
