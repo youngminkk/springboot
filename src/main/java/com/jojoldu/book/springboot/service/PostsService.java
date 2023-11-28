@@ -36,7 +36,7 @@ public class PostsService {
         postsRepository.delete(posts);
     }
     public PostsResponseDto findById(Long id) {
-        Posts entity = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없스니다. id=" +id));
+        Posts entity = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id=" +id));
 
         return new PostsResponseDto(entity);
     }
