@@ -10,3 +10,6 @@
 
 올해 11월 24일에 Spring Boot 2의 OSS 지원이 EOL(End Of Life)을 맞이하면서 지원이 중단. 11월에는 Spring Boot 3.2 버전 릴리스도 예정.
 ![cicd](https://github.com/youngminkk/springboot/assets/146568255/988e1c04-c0e4-41e0-b5c4-8544de15138a)
+
+현재 개발 진행중이며 cicd 까지 구축 되었습니다. 
+https://mpago.co.kr 로 접속하시면 됩니다 최종적으로 등산관련종합웹사이트로 변경중입니다.
