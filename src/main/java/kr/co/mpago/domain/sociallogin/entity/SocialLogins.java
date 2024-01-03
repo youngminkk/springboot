@@ -4,15 +4,18 @@ import kr.co.mpago.domain.BaseTimeEntity;
 import kr.co.mpago.domain.user.entity.User;
 import jakarta.persistence.*;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Arrays;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "sociallogins")
+@Table(name = "SocialLogins")
 public class SocialLogins extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +34,7 @@ public class SocialLogins extends BaseTimeEntity {
     @Column(length = 1024, nullable = true)
     private String oauth2RefreshToken;
 
-    @Column(name = "is_deleted", nullable = true, columnDefinition = "boolean default false")
+    @Column(name = "is_deleted", nullable = false, columnDefinition = "boolean default false")
     private Boolean isDeleted=false;
 
     @ManyToOne(fetch = FetchType.LAZY)
