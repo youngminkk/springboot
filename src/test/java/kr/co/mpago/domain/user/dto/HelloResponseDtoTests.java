@@ -1,6 +1,5 @@
 package kr.co.mpago.domain.user.dto;
 
-import kr.co.mpago.domain.user.dto.HelloResponseDto;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

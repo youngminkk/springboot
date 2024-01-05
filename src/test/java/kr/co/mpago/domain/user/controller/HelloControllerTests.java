@@ -1,6 +1,5 @@
 package kr.co.mpago.domain.user.controller;
 
-import kr.co.mpago.domain.user.controller.HelloController;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

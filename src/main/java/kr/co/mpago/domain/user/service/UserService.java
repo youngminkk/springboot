@@ -1,5 +1,4 @@
 package kr.co.mpago.domain.user.service;
-
 import kr.co.mpago.domain.user.entity.User;
 import kr.co.mpago.domain.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
